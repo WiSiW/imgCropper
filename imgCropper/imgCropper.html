@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="meApp">
+<head>
+	<meta charset="UTF-8">
+	<title>文章详情</title>
+    <script>
+        window.version = + new Date();
+        document.writeln('<link href="css/style.css?v=' + version + '" rel="stylesheet" />');
+        document.writeln('<link href="css/imgCropper.css?v=' + version + '" rel="stylesheet" />');
+        document.writeln('<link href="cropper/css/cropper.css?v=' + version + '" rel="stylesheet" />');
+        document.writeln('<script src="js/jquery-1.11.3.min.js?v=' + version + '"></scr' + 'ipt>');
+        document.writeln('<script src="cropper/js/cropper.js?v=' + version + '"></scr' + 'ipt>');
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+        <div class="img-slide-upload">
+            <div class="img-modal-outer"></div>
+            <div class="img-modal-inner">
+                <div class="img-modal">
+                    <div class="img-modal-header">
+                        <div class="label">裁剪图片</div>
+                        <div class="close-modal" onclick="closeModal()">&times;</div></div>
+                    <div class="img-modal-body">
+                        <div class="img-btn-upload">
+                            <form>
+                                <input type="file" id="image_file" accept="image/jpg,image/jpeg,image/png,image/gif,image/bmp" style="display: none" />
+                            </form>
+                            <button for="image_file">选择图片</button>
+                        </div>
+                        <div class="img-left">
+                            <img src="images/img_photo_normal.png" id="cropper_image" alt="Picture">
+                        </div>
+                        <div class="img-right">
+                            <div class="img-preview preview-lg"></div>
+                            <div class="img-preview preview-md"></div>
+                        </div>
+                    </div>
+                    <div class="img-modal-footer">
+                            <button onclick="submitImg()">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.writeln('<script src="imgCropper.js?v=' + version + '"></scr' + 'ipt>');
+</script>
+</html>
